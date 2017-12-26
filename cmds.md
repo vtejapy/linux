@@ -1,9 +1,7 @@
- 1. SYSTEM
-linux-system
+# SYSTEM
+## linux-system
 
-
-
-
+```
 $ uname -a Displays Linux system information
 
 $ uname -r Displays kernel release information
@@ -21,11 +19,12 @@ $ date Shows the current date and time
 $ cal Shows this month calendar
 
 $ whoami Shows who you are logged in as
+```
 
+# HARDWARE
+## linux-hardware
 
-2. HARDWARE
-linux-hardware
-
+```
 $ dmesg Detected hardware and boot messages
 
 $ cat /proc/meminfo Hardware memory information
@@ -49,11 +48,12 @@ $ sudo hdparm -i /dev/sda # Shows info about disk sda
 $ sudo hdparm -tT /dev/sda # Do a read speed test on disk sda
 
 $ sudo badblocks -s /dev/sda # Test for unreadable blocks on disk sda
+```
 
+# STATISTICS
+## linux-statistics
 
-3. STATISTICS
-linux-statistics
-
+```
 $ top Displays the top CPU processes (Ctrl+C to exit)
 
 $ vmstat 2 Displays virtual memory statistics
@@ -68,10 +68,11 @@ $ lsof -u myuser Lists files opened by specific user
 
 $ watch df -h Shows changeable data continuously
 
+```
+# USERS
+## linux-users
 
-4. USERS
-linux-users
-
+```
 $ id Shows the active user id with login and group
 
 $ last Shows last logins on the system
@@ -87,11 +88,12 @@ $ userdel sam Deletes user sam
 $ adduser sam Adds user "sam"
 
 $ usermod Modifies user information
+```
 
+# FILE COMMANDS
+## linux-file
 
-5. FILE COMMANDS
-linux-file
-
+```
 $ cd .. To go up one level of the directory tree
 
 $ cd Goes to $HOME directory
@@ -217,11 +219,11 @@ $ gpg -c file Encrypts file
 
 $ gpg file.gpg Decrypts file
 
+```
+# PROCESS RELATED
+## linux-process
 
-6. PROCESS RELATED
-linux-process
-
-
+```
 $ ps Displays your currently active processes
 
 $ ps aux | grep 'telnet' Finds all process id related to telnet process
@@ -248,10 +250,11 @@ $ fg Brings the most recent job to foreground
 
 $ fg n Brings job n to the foreground
 
+```
+# FILE PERMISSION RELATED
+## linux-permission
 
-7. FILE PERMISSION RELATED
-linux-permission
-
+```
 $ chmod 777 /data/test.c Sets rwx permission for owner , rwx permission for group, rwx permission for world
 
 $ chmod 755 /data/test.c Sets rwx permission for owner,rx for group and world
@@ -262,11 +265,11 @@ $ chown owner-user:owner-group file-name Changes the owner and group owner of th
 
 $ chown owner-user:owner-group directory Changes the owner and group owner of the directory
 
+```
+# NETWORK
+## linux-network
 
-8. NETWORK
-linux-network
-
-
+```
 $ ifconfig -a Display all network ports and ip address
 
 $ ifconfig eth0 Display specific ethernet port ip address and details
@@ -300,9 +303,12 @@ $ ssh user@host Connects to host as user
 $ ssh -p port user@host Connects to host using specific port
 
 $ telnet host Connects to the system using telnet port
-9. COMPRESSION / ARCHIVES
-linux-compression
 
+```
+# COMPRESSION / ARCHIVES
+## linux-compression
+
+```
 $ tar cf home.tar home Creates tar named home.tar containing home/
 
 $ tar xf file.tar Extracts the files from file.tar
@@ -311,13 +317,11 @@ $ tar czf file.tar.gz files Creates a tar with gzip compression
 
 $ gzip file Compresses the file and renames it to file.gz
 
+```
+# FILE TRANSFER
+## linux-file-transfer
 
-10. FILE TRANSFER
-linux-file-transfer
-
-
-
-
+```
 $ scp file.txt server2:/tmp  Secure copies file.txt to remote host /tmp folder
 
 $ scp nixsavy@server2:/www/*.html /www/tmp  Copies *.html files from remote host to current system /www/tmp folder
@@ -327,4 +331,4 @@ $ scp -r nixsavy@server2:/www /www/tmp Copies all files and folders recursively 
 $ rsync -a /home/apps /backup/ Synchronizes source to destination
 
 $ rsync -avz /home/apps linoxide@192.168.10.1:/backup Synchronizes files/directories between the local and remote system with compression enabled
-
+```
