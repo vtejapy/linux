@@ -563,7 +563,13 @@ $ mkdir NginxDir
 ```
 Step 2: Create file
 ```
-$ vi Dockerfile
+$ cat Dockerfile
+FROM ubuntu:14.04
+RUN apt-get update 
+RUN apt-get -y install apache2 
+
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+
 ```
 Step 3: Write this commands in the file
 Step4: Build Image
